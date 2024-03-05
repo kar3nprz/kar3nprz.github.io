@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--archivo CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--archivo CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--archivo JavaScript-->
+    <script defer src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Otros elementos del encabezado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<title>Great Wedding</title>
+</head>
+
+<body>
+
+    <header>
+
+        <audio autoplay loop>
+            <source src="audio/AThousandYears.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>          
+
+        <div class="logo-container">
+            <img src="imagenes/logo2largo.png" alt="Great Wedding by Karen Pérez">
+            <div class="icons-container">
+                <a href="#"><i class="fas fa-user"></i></a> <!-- Icono de registrarse/iniciar sesión -->
+                <a href="#"><i class="fas fa-heart"></i></a> <!-- Icono de wishlist -->
+            </div>
+        </div>
+        
+        <nav>
+            <div>
+                <ul>
+                <li><a href="http://127.0.0.1:5500/">HOME</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#categorias">CATEGORÍAS</a></li>
+                <li><a href="#novedades">NOVEDADES</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<div class="container">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="imagenes/boda1.png" class="d-block w-100" alt="Primera diapositiva">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="imagenes/boda2.png" class="d-block w-100" alt="Segunda diapositiva">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="imagenes/boda3.png" class="d-block w-100" alt="Tercera diapositiva">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark">
+    <p class="text-light">“Cuando te das cuenta de que quieres pasar el resto de tu vida con alguien, deseas que el resto de tu vida comience cuanto antes”</p>
+</div>
+
+<h2 id="categorias">CATEGORÍAS</h2>
+
+<!-- contenedor general para poner todas las categorías -->
+<div class="opciones">
+
+    <div class="caja">
+        <!-- primera categoría -->
+        <img src="imagenes/despedida.webp" alt="Despedida de soltera">
+        <h1>Despedida de soltera</h1>
+        <div id="contenido" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>¡Celebra la última noche de soltería de tu mejor amiga con estilo! Prepárate para una despedida de soltera llena de diversión y risas con nuestros accesorios y decoraciones únicas. Desde divertidas coronas de novia hasta juegos atrevidos, tenemos todo lo que necesitas para una fiesta memorable.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido")' class="btn btn-primary" form="contenido" >+</button>
+    </div>
+
+    <div class="caja">
+        <!-- segunda categoría -->
+        <img src="imagenes/novios.jpeg" alt="Novios">
+        <h1>Novios</h1>
+        <div id="contenido2">
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Prepárate para el día de tu boda con nuestra colección de artículos cuidadosamente seleccionados para novios. Desde kits de cuidado personal hasta trajes a medida y hermosos vestidos, tenemos todo lo necesario para que te sientas confiado y listo para dar el 'sí, acepto'.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido2")' class="btn btn-primary" form="contenido2" >+</button>
+    </div>
+    
+    <div class="caja">
+        <!-- tercera categoría -->
+        <img src="imagenes/invitados.jpeg" alt="Invitados">
+        <h1>Invitados</h1>
+        <div id="contenido3" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Agradece a tus invitados por ser parte de tu día especial con nuestros encantadores recuerdos de boda. Desde pequeños detalles personalizados hasta elegantes regalos de agradecimiento, encontrarás la manera perfecta de expresar tu gratitud y hacer que cada invitado se sienta apreciado.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido3")' class="btn btn-primary" form="contenido3" >+</button>
+    </div>
+
+    <div class="caja">
+        <!-- cuarta categoría -->
+        <img src="imagenes/decoraciones.jpg" alt="Decoración">
+        <h1>Decoración</h1>
+        <div id="contenido4" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Haz que cada rincón de tu boda brille con nuestra hermosa decoración. Encontrarás desde sutiles y delicados detalles hasta impresionantes piezas centrales. Nuestra colección tiene todo lo que necesitas para hacer que tu día soñado sea verdaderamente inolvidable.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido4")' class="btn btn-primary" form="contenido4" >+</button>
+</div>
+
+</div>
+
+<h2 id="novedades">NOVEDADES</h2>
+
+<!-- contenedor general para poner todas las novedades -->
+<div class="opciones">
+
+    <div class="caja">
+        <!-- quinta novedad -->
+        <img src="imagenes/invitaciones.jpg" alt="Invitaciones">
+        <h1>Invitaciones</h1>
+        <div id="contenido5" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Nuestras invitaciones capturarán la esencia única de tu amor y anticipar la emoción de compartir este momento con tus seres queridos. Descubre una amplia gama de estilos, diseños y opciones para asegurarte de que tus invitaciones reflejen perfectamente la visión de tu boda.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido5")' class="btn btn-primary" form="contenido5" >+</button>
+    </div>
+    
+    <div class="caja">
+        <!-- sexta novedad -->
+        <img src="imagenes/salida.jpeg" alt="Salida de iglesia">
+        <h1>Salida de iglesia</h1>
+        <div id="contenido6" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Haz que cada paso fuera de la iglesia sea memorable y lleno de amor. Desde el clásico lanzamiento de arroz y pétalos hasta las divertidas bengalas y las románticas burbujas, tenemos todo lo que necesitas para añadir un toque de magia a la salida de los recién casados.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido6")' class="btn btn-primary" form="contenido6" >+</button>
+    </div>
+
+    <div class="caja">
+        <!-- septima novedad -->
+        <img src="imagenes/transporte.jpg" alt="Transporte">
+        <h1>Transporte</h1>
+        <div id="contenido7" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Crea una salida de la iglesia aún más espectacular con nuestros artículos que añadirán un toque de estilo y elegancia a tu viaje hacia la recepción. Prepara el camino hacia la felicidad con nuestra decoración para el transporte que hará que tu salida sea tan inolvidable como tu amor.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido7")' class="btn btn-primary" form="contenido7" >+</button>
+    </div>
+
+    <div class="caja">
+        <!-- octava novedad -->
+        <img src="imagenes/lunademiel.jpg" alt="Luna de miel">
+        <h1>Luna de miel</h1>
+        <div id="contenido8" >
+        <!-- este contenedor es el que quiero ocultar/mostrar -->
+        <p>Nuestra colección está diseñada para añadir un toque de romance y comodidad a cada instante de tu escapada especial: velas aromaticas, suaves almohadas y sábanas de lujo... cada detalle está diseñado para añadir un toque de romance y confort a tu luna de miel.</p>
+    </div>
+    <button onclick='muestra_oculta("contenido8")' class="btn btn-primary" form="contenido8" >+</button>
+    </div>
+
+</div>
+
+    <div class="container-lg bg-warning">
+        <p class="text-danger">“Un matrimonio exitoso requiere enamorarse muchas veces, siempre de la misma persona”</p>
+    </div>
+
+    <h4>PROXIMAMENTE TE RECOMEDAMOS:</h4>
+
+    <div class="container-rec text-center">
+        
+        <div class="row">
+            <div class="col-md bg-light"><h5>Lugares turísticos para enamorados</h5><br><iframe width="560" height="315" src="https://www.youtube.com/embed/tMbWVTf2njw?si=N_3lsv5X2riHyb9L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="col-md bg-light"><h5>Situaciones graciosas que te pueden pasar en tu boda</h5><br> <iframe width="560" height="315" src="https://www.youtube.com/embed/p5EXzgYMLQo?si=g4JYzSLnJMTVSoM-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        </div>
+    </div>
+
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.408106610435!2d-101.25901092569421!3d21.016350588206517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b74061f891c9d%3A0x4f4d44fab57a439!2sCjon.%20del%20Beso%2C%20Zona%20Centro%2C%2036000%20Guanajuato%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1708886820306!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+        <span id="nosotros">¿QUIÉNES SOMOS?</span><br>
+        <p>GREAT WEDDING es una empresa de venta de artículos de boda y recomendaciones para tu día especial, comprometida con hacer la boda de tus sueños realidad.</p>
+        
+        <div class="social-icons">
+            <span>Encuéntranos en :</span>
+            <a href="https://www.facebook.com/kar3n.prz/" class="facebook-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/?lang=es" class="twitter-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/kar3n_prz?igsh=bXBvbmpidzY5cW1o" class="instagram-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <h6>Suscríbete para recibir noticias y actualizaciones</h6>
+        <form action="procesar_suscripcion.php" method="post">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Suscribirse</button>
+        </form>
+
+        <p>© GREAT WEDDING by Karen Pérez 2024. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
